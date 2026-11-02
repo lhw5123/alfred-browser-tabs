@@ -91,6 +91,21 @@
 				<false/>
 			</dict>
 		</array>
+		<key>4663B6DC-5BF9-49B9-AF1E-87834E37F61A</key>
+		<array/>
+		<key>57254FDF-C223-4B41-B8BE-6149AD19D392</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>841FE1B5-F7A2-4C51-9347-50B7FBD00D1D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>66D908A6-B70B-46C5-9BCF-7E46F79D9270</key>
 		<array>
 			<dict>
@@ -117,6 +132,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7DE60E5D-2FD9-4CE1-9D5B-86971315756C</key>
+		<array/>
 		<key>7FE334B2-8D0A-40CF-96C0-334C39924EFC</key>
 		<array>
 			<dict>
@@ -144,11 +161,24 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>44CB4B42-4CD6-4B69-B6C1-22E513EA1258</string>
+				<string>57254FDF-C223-4B41-B8BE-6149AD19D392</string>
 				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
 				<string>Copy url</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>841FE1B5-F7A2-4C51-9347-50B7FBD00D1D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4663B6DC-5BF9-49B9-AF1E-87834E37F61A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -196,7 +226,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>F45500ED-412B-4C62-A7AC-4A29E3F6647F</string>
+				<string>7DE60E5D-2FD9-4CE1-9D5B-86971315756C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -624,7 +654,7 @@
 				<key>runningsubtext</key>
 				<string>Loading tabs...</string>
 				<key>script</key>
-				<string>./list-tabs.js "Dia"</string>
+				<string>./list-tabs-dia.js</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -694,6 +724,97 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>./focus-tab-dia.js "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7DE60E5D-2FD9-4CE1-9D5B-86971315756C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>function run() {
+  let query = "{query}";
+  let [, , , url] = query.split(",");
+
+  return url
+}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>57254FDF-C223-4B41-B8BE-6149AD19D392</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>841FE1B5-F7A2-4C51-9347-50B7FBD00D1D</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Copied to clipboard</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>4663B6DC-5BF9-49B9-AF1E-87834E37F61A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Github Repo: https://github.com/epilande/alfred-browser-tabs
@@ -743,6 +864,20 @@ Commands:
 			<key>ypos</key>
 			<real>255.0</real>
 		</dict>
+		<key>4663B6DC-5BF9-49B9-AF1E-87834E37F61A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1260</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
+		<key>57254FDF-C223-4B41-B8BE-6149AD19D392</key>
+		<dict>
+			<key>xpos</key>
+			<integer>890</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
 		<key>66D908A6-B70B-46C5-9BCF-7E46F79D9270</key>
 		<dict>
 			<key>xpos</key>
@@ -757,6 +892,13 @@ Commands:
 			<key>ypos</key>
 			<real>70.0</real>
 		</dict>
+		<key>7DE60E5D-2FD9-4CE1-9D5B-86971315756C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>890</integer>
+			<key>ypos</key>
+			<integer>255</integer>
+		</dict>
 		<key>7FE334B2-8D0A-40CF-96C0-334C39924EFC</key>
 		<dict>
 			<key>xpos</key>
@@ -770,6 +912,13 @@ Commands:
 			<integer>325</integer>
 			<key>ypos</key>
 			<integer>255</integer>
+		</dict>
+		<key>841FE1B5-F7A2-4C51-9347-50B7FBD00D1D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1075</integer>
+			<key>ypos</key>
+			<integer>340</integer>
 		</dict>
 		<key>931B7F50-3BC6-4A79-8EFA-B24F2A84E33A</key>
 		<dict>

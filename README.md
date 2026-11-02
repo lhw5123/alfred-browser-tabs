@@ -14,6 +14,7 @@ You have hundreds of tabs open that you need to sift through and ain't nobody go
 
 - Blazing fast!
 - Supports Safari, Dia, Chrome.
+- Dia: search tabs across all profiles.
 - Fuzzy search title & URLs.
 - Relevant results (last active window).
 - Customizable hotkeys & keywords.
