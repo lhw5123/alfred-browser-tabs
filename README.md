@@ -14,7 +14,7 @@ You have hundreds of tabs open that you need to sift through and ain't nobody go
 
 - Blazing fast!
 - Supports Safari, Dia, Chrome.
-- Dia: search tabs across all profiles.
+- Dia: search all tabs across different profiles (results show the profile name).
 - Fuzzy search title & URLs.
 - Relevant results (last active window).
 - Customizable hotkeys & keywords.
@@ -40,7 +40,7 @@ For example:
 ### Commands
 
 - `safari tabs {query}` - Fetch tabs from Safari and filter based on query.
-- `dia tabs {query}` - Fetch tabs from Dia and filter based on query.
+- `dia tabs {query}` - Fetch tabs from all Dia profiles and filter based on query.
 - `chrome tabs {query}` - Fetch tabs from Google Chrome and filter based on query.
 
 ### Copy to clipboard
