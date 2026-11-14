@@ -1,59 +1,33 @@
-<div align="center">
-  <h1>Alfred Browser Tabs</h1>
-</div>
+# Alfred Browser Tabs
 
-<p align="center">
-  <strong>Search browser tabs from Safari, Dia, and Chrome.</strong>
-</p>
+Search open tabs in Safari, Dia, and Chrome from Alfred.
 
-## Why?
+Type a keyword, filter by title or URL, and press Return to focus that tab.
 
-You have hundreds of tabs open that you need to sift through and ain't nobody got time for that.
+## Requirements
 
-## Features
-
-- Blazing fast!
-- Supports Safari, Dia, Chrome.
-- Dia: search all tabs across different profiles (results show the profile name).
-- Fuzzy search title & URLs.
-- Relevant results (last active window).
-- Customizable hotkeys & keywords.
-- Copy URL to clipboard.
+- macOS
+- [Alfred](https://www.alfredapp.com/) with the Powerpack
 
 ## Installation
 
-1. Download the Alfred Workflow ([Browser-Tabs.alfredworkflow](https://github.com/epilande/alfred-browser-tabs/releases/latest/download/Browser-Tabs.alfredworkflow)).
-1. Double-click to import into Alfred (requires Powerpack).
-1. Review workflow, add hotkeys, customize.
-
-## Demo
-
-<img src="./demo.gif" width="530">
+1. Download [Browser-Tabs.alfredworkflow](https://github.com/lhw5123/alfred-browser-tabs/releases/latest/download/Browser-Tabs.alfredworkflow) from the [latest release](https://github.com/lhw5123/alfred-browser-tabs/releases/latest).
+2. Double-click the file to import it into Alfred.
 
 ## Usage
 
-I would recommend setting up a hotkey to toggle the workflow to immediately search open tabs.
-For example:
+| Keyword | Browser |
+| --- | --- |
+| `safari tabs` | Safari |
+| `dia tabs` | Dia, across every profile |
+| `chrome tabs` | Google Chrome |
 
-<img src="./hotkey.png" alt="setup hotkey" width="430">
+Add a query after the keyword to filter the list. Dia results show the profile name next to the URL.
 
-### Commands
+Hold Control while selecting a result to copy that tab's URL.
 
-- `safari tabs {query}` - Fetch tabs from Safari and filter based on query.
-- `dia tabs {query}` - Fetch tabs from all Dia profiles and filter based on query.
-- `chrome tabs {query}` - Fetch tabs from Google Chrome and filter based on query.
-
-### Copy to clipboard
-
-Holding the `CTRL` key while selecting an item will copy the selected tab URL to your clipboard.
-
-## More workflows
-
-- [alfred-be-quiet](https://github.com/epilande/alfred-be-quiet) - Workflow to automatically pause audio/video playing.
-- [alfred-wifi-password](https://github.com/epilande/alfred-wifi-password) - Get Wi-Fi password from Keychain.
-- [alfred-password-generator](https://github.com/epilande/alfred-password-generator) - Workflow to generate passwords.
-- [alfred-prettier-clipboard](https://github.com/epilande/alfred-prettier-clipboard) - Format code in your clipboard with Prettier.
+Each browser trigger can take a hotkey in the Alfred workflow editor.
 
 ## License
 
-[MIT License](https://oss.ninja/mit/epilande/)
+[MIT](LICENSE)
